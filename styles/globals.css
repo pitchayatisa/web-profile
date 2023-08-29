@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* @import 'atropos/css'; */
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -16,12 +17,96 @@
   }
 }
 
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+}
+
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: rgb(255, 255, 255);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-image: radial-gradient(at 50% 50%, rgb(224, 242, 254) 0, transparent 30%), radial-gradient(at 0% 26%, rgb(234, 214, 255) 0, transparent 29%), radial-gradient(at 99% 91%, rgb(210, 236, 253) 0, transparent 20%), radial-gradient(at 0% 97%, rgb(207, 250, 254) 0, transparent 23%), radial-gradient(at 100% 21%, rgb(255, 233, 218) 0, transparent 23%);
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: plum;
+  
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+    
+  .swiper {
+    width: 100vh;
+    height: 300px;
+    margin: 0;
+  }
+  .append-buttons {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .append-buttons button {
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid #007aff;
+    color: #007aff;
+    text-decoration: none;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin: 0 10px;
+    font-size: 13px;
+  }
+
+  .swiper-button-prev {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-image: linear-gradient(#FB923C, #EA580B);
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  }
+
+  .swiper-button-prev:hover {
+    transform: scale(1.1);
+    transition: 0.3s ease-in-out;
+  }
+
+  .swiper-button-prev:after {
+    font-size: 18px;
+    color: white;
+  }
+
+  .swiper-button-next {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-image: linear-gradient(#FB923C, #EA580B);
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  }
+
+  .swiper-button-next:hover {
+    transform: scale(1.1);
+    transition: 0.3s ease-in-out;
+  }
+
+  .swiper-button-next:after {
+    font-size: 18px;
+    color: white;
+  }
 }
