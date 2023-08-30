@@ -9,13 +9,13 @@ import { experience } from "./const/experience/experience";
 import { portfolio, btnPortfolio } from "./const/portfolio/portfolio";
 import Aos from "aos";
 
-const Footer = dynamic(() => import("./components/layouts/footer"), {
+const Footer = dynamic(() => import("./components/layouts/footer.page"), {
   ssr: false,
 });
-const Header = dynamic(() => import("./components/layouts/header"), {
+const Header = dynamic(() => import("./components/layouts/header.page"), {
   ssr: false,
 });
-const Navbar = dynamic(() => import("./components/layouts/navbar"), {
+const Navbar = dynamic(() => import("./components/layouts/navbar.page"), {
   ssr: false,
 });
 const inter = Inter({ subsets: ["latin"] });

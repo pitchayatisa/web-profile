@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { portfolioDetail } from "../../const/portfolio/portfolio";
 import Link from "next/link";
 
-const Navbar = dynamic(() => import("../../components/layouts/navbar"), {
+const Navbar = dynamic(() => import("../../components/layouts/navbar.page"), {
   ssr: false,
 });
 
