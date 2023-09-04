@@ -2,6 +2,7 @@ import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
 import { portfolioDetail } from "../../const/portfolio/portfolio";
 import Link from "next/link";
+import Image from "next/image";
 
 const Navbar = dynamic(() => import("../../components/layouts/navbar.page"), {
   ssr: false,
@@ -78,11 +79,14 @@ export default function PortfolioDetail() {
                       Back
                     </Link>
                     <div className="flex justify-center px:4 pb-4 sm:pb-10 aspect-h-5 aspect-w-4 lg:aspect-h-4 lg:aspect-w-3 sm:overflow-hidden">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
+                      <Image
                         src={`${detail.img}`}
-                        alt="Model wearing plain white basic tee."
+                        alt={`${detail.description}`}
                         className="h-full w-full sm:w-[90%] md:w-[90%] xl:w-[60%] object-cover object-center rounded-xl shadow-xl"
+                        width={1000}
+                        height={1000}
+                        placeholder="blur"
+                        blurDataURL={`${detail.img}`}
                       />
                     </div>
                   </div>

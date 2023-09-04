@@ -73,6 +73,7 @@ export default function Header() {
                 alt="resume"
                 data-atropos-offset="3"
                 data-aos="fade-right"
+                placeholder="blur"
               />
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -80,6 +81,7 @@ export default function Header() {
                 alt="resume"
                 data-atropos-offset="5"
                 data-aos="fade-down-left"
+                placeholder="blur"
                 className="absolute -top-6 2xl:right-60 xl:right-48 lg:right-24 2xl:w-20 xl:w-16 lg:w-12 hidden lg:block"
               />
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -88,6 +90,7 @@ export default function Header() {
                 alt="resume"
                 data-atropos-offset="5"
                 data-aos="fade-down-right"
+                placeholder="blur"
                 className="absolute -top-16 left-0 2xl:w-40 xl:w-32 lg:w-24 hidden lg:block"
               />
             </Atropos>
