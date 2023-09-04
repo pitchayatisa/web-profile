@@ -1,3 +1,4 @@
+import { menu } from "@/pages/const/menu/menu";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import { useState } from "react";
@@ -26,7 +27,11 @@ export default function Navbar() {
           aria-label="Global"
         >
           <div className="flex lg:flex-1">
-            <a onClick={() => setIsOpen(!isOpen)} href="#" className="-m-1.5 p-1.5">
+            <a
+              onClick={() => setIsOpen(!isOpen)}
+              href="#"
+              className="-m-1.5 p-1.5"
+            >
               <span className="sr-only">Your Company</span>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -60,30 +65,15 @@ export default function Navbar() {
             </button>
           </div>
           <div className="hidden lg:flex lg:gap-x-12 items-center">
-            <Link
-              href="/"
-              className="transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 font-semibold leading-6 text-gray-900 hover:text-orange-500 dark:text-white dark:hover:text-orange-500"
-            >
-              Home
-            </Link>
-            <Link
-              href="/#about-me"
-              className="transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 font-semibold leading-6 text-gray-900 hover:text-orange-500 dark:text-white dark:hover:text-orange-500"
-            >
-              About me
-            </Link>
-            <Link
-              href="/#portfolio"
-              className="transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 font-semibold leading-6 text-gray-900 hover:text-orange-500 dark:text-white dark:hover:text-orange-500"
-            >
-              Portfolio
-            </Link>
-            <Link
-              href="/#skill"
-              className="transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 font-semibold leading-6 text-gray-900 hover:text-orange-500 dark:text-white dark:hover:text-orange-500"
-            >
-              Skill
-            </Link>
+            {menu.map((menus, index) => (
+              <Link
+                key={index}
+                href={`${menus.link}`}
+                className="transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 font-semibold leading-6 text-gray-900 hover:text-orange-500 dark:text-white dark:hover:text-orange-500"
+              >
+                {menus.menu}
+              </Link>
+            ))}
             <div className="flex items-center">
               <button
                 className={`w-fit mr-6 relative hover:scale-110 active:scale-100 duration-200`}
@@ -128,7 +118,9 @@ export default function Navbar() {
           {/* <!-- Background backdrop, show/hide based on slide-over state. --> */}
           <div
             className={`${
-              isOpen ? "right-0 translate-x-0" : "-right-[100rem] translate-x-full"
+              isOpen
+                ? "right-0 translate-x-0"
+                : "-right-[100rem] translate-x-full"
             } ease-in-out duration-1000 fixed inset-y-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10`}
           >
             <div className="flex items-center justify-between">
@@ -167,42 +159,56 @@ export default function Navbar() {
             <div className="mt-6 flow-root">
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="space-y-2 py-6">
+                  {menu.map((menus, index) => (
+                    <Link
+                      key={index}
+                      href={`${menus.link}`}
+                      onClick={() => setIsOpen(false)}
+                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gradient-to-b from-orange-400 via-orange-500 to-orange-600 hover:bg-gradient-to-br hover:text-white hover:rounded-full hover:shadow-2xl hover:shadow-orange-400/100 dark:shadow-orange-700/50"
+                    >
+                      {menus.menu}
+                    </Link>
+                  ))}
+
                   <Link
-                    href="/"
+                    href="/#contact-me"
                     onClick={() => setIsOpen(false)}
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gradient-to-b from-orange-400 via-orange-500 to-orange-600 hover:bg-gradient-to-br hover:text-white hover:rounded-full hover:shadow-2xl hover:shadow-orange-400/100 dark:shadow-orange-700/50"
                   >
-                    Home
+                    Contact me
                   </Link>
-                  <Link
-                    href="/#about-me"
-                    onClick={() => setIsOpen(false)}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gradient-to-b from-orange-400 via-orange-500 to-orange-600 hover:bg-gradient-to-br hover:text-white hover:rounded-full hover:shadow-2xl hover:shadow-orange-400/100 dark:shadow-orange-700/50"
+                  <button
+                    className={`w-fit mr-6 relative hover:scale-110 active:scale-100 duration-200`}
+                    onClick={() =>
+                      setTheme(theme === "dark" ? "light" : "dark")
+                    }
                   >
-                    About me
-                  </Link>
-                  <Link
-                    href="/#portfolio"
-                    onClick={() => setIsOpen(false)}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gradient-to-b from-orange-400 via-orange-500 to-orange-600 hover:bg-gradient-to-br hover:text-white hover:rounded-full hover:shadow-2xl hover:shadow-orange-400/100 dark:shadow-orange-700/50"
-                  >
-                    Portfolio
-                  </Link>
-                  <Link
-                    href="/#skill"
-                    onClick={() => setIsOpen(false)}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gradient-to-b from-orange-400 via-orange-500 to-orange-600 hover:bg-gradient-to-br hover:text-white hover:rounded-full hover:shadow-2xl hover:shadow-orange-400/100 dark:shadow-orange-700/50"
-                  >
-                    Skill
-                  </Link>
-                </div>
-                <div className="py-6">
-                  <a
-                    href="#"
-                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                  >
-                    Log in
-                  </a>
+                    {theme === "light" ? (
+                      <svg
+                        onClick={() => setIsOpen(false)}
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="#F87315"
+                        className="w-6"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    ) : (
+                      <svg
+                        onClick={() => setIsOpen(false)}
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="#F87315"
+                        className="w-6 h-6"
+                      >
+                        <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z" />
+                      </svg>
+                    )}
+                  </button>
                 </div>
               </div>
             </div>

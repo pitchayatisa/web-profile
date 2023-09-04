@@ -154,7 +154,10 @@ export default function Home() {
                     My <span className="text-orange-500">Skills</span>
                   </h2>
                   <div className="mx-auto mt-20 grid max-w-lg grid-cols-4 place-items-center items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
-                    <div data-aos="fade-up">
+                    <div
+                      data-aos="fade-up"
+                      className="col-span-2 max-h-12 w-28 object-contain lg:col-span-1"
+                    >
                       <svg
                         height="508"
                         xmlns="http://www.w3.org/2000/svg"
@@ -242,7 +245,10 @@ export default function Home() {
                       width={100}
                       height={100}
                     />
-                    <div data-aos="fade-up">
+                    <div
+                      data-aos="fade-up"
+                      className="col-span-2 max-h-16 w-44 object-contain lg:col-span-1"
+                    >
                       <svg
                         viewBox="0 0 318 318"
                         xmlns="http://www.w3.org/2000/svg"
@@ -287,7 +293,10 @@ export default function Home() {
                         </g>
                       </svg>
                     </div>
-                    <div data-aos="fade-up">
+                    <div
+                      data-aos="fade-up"
+                      className="col-span-2 max-h-16 w-36 object-contain lg:col-span-1"
+                    >
                       <svg
                         height="308"
                         viewBox=".16 .18 799.8 98.72"
@@ -311,7 +320,10 @@ export default function Home() {
                       width={100}
                       height={100}
                     />
-                    <div data-aos="fade-up">
+                    <div
+                      data-aos="fade-up"
+                      className="col-span-2 max-h-12 w-24 object-contain lg:col-span-1"
+                    >
                       <svg
                         width="2500"
                         height="1055"
@@ -330,7 +342,10 @@ export default function Home() {
                         />
                       </svg>
                     </div>
-                    <div data-aos="fade-up">
+                    <div
+                      data-aos="fade-up"
+                      className="col-span-2 max-h-16 w-24 object-contain lg:col-span-1"
+                    >
                       <svg
                         viewBox="0 -0.10000000000000853 960.6 264.50000000000006"
                         xmlns="http://www.w3.org/2000/svg"

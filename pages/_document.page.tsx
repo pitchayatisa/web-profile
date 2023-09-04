@@ -6,6 +6,7 @@ export default function Document() {
       <Head>
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
       </Head>
+      <title>{"HI THERE! I'm Pitchayatisa"}</title>
       <body>
         <Main />
         <NextScript />

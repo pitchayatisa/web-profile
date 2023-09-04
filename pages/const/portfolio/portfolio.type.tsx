@@ -19,6 +19,7 @@ export interface PortfolioDetail {
   description: string;
   link: string;
   isShow: boolean;
+  img: string;
 }
 
 

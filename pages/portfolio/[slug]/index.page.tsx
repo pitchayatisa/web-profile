@@ -56,45 +56,39 @@ export default function PortfolioDetail() {
                   </div>
 
                   {/* <!-- Image gallery --> */}
-                  <div className="mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-8">
-                    <div className="aspect-h-4 aspect-w-3 hidden overflow-hidden rounded-lg lg:block">
+                  <div className="mx-auto max-w-2xl mt-10 lg:mt-0 px-4 sm:px-6 lg:grid lg:max-w-7xl lg:grid lg:gap-x-8 lg:px-8">
+                    <Link
+                      href="/#portfolio"
+                      className="w-fit mb-4 flex transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 text-orange-500 font-medium rounded-full pl-2 pr-5 py-1.5 text-center"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth="1.5"
+                        stroke="currentColor"
+                        className="w-6 h-6 mr-2"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M15.75 19.5L8.25 12l7.5-7.5"
+                        />
+                      </svg>
+                      Back
+                    </Link>
+                    <div className="flex justify-center px:4 pb-4 sm:pb-10 aspect-h-5 aspect-w-4 lg:aspect-h-4 lg:aspect-w-3 sm:overflow-hidden">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
-                        src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg"
-                        alt="Two each of gray, white, and black shirts laying flat."
-                        className="h-full w-full object-cover object-center"
-                      />
-                    </div>
-                    <div className="hidden lg:grid lg:grid-cols-1 lg:gap-y-8">
-                      <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg">
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
-                          src="https://tailwindui.com/img/ecommerce-images/product-page-02-tertiary-product-shot-01.jpg"
-                          alt="Model wearing plain black basic tee."
-                          className="h-full w-full object-cover object-center"
-                        />
-                      </div>
-                      <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg">
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
-                          src="https://tailwindui.com/img/ecommerce-images/product-page-02-tertiary-product-shot-02.jpg"
-                          alt="Model wearing plain gray basic tee."
-                          className="h-full w-full object-cover object-center"
-                        />
-                      </div>
-                    </div>
-                    <div className="aspect-h-5 aspect-w-4 lg:aspect-h-4 lg:aspect-w-3 sm:overflow-hidden sm:rounded-lg">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
-                        src="https://tailwindui.com/img/ecommerce-images/product-page-02-featured-product-shot.jpg"
+                        src={`${detail.img}`}
                         alt="Model wearing plain white basic tee."
-                        className="h-full w-full object-cover object-center"
+                        className="h-full w-full sm:w-[90%] md:w-[90%] xl:w-[60%] object-cover object-center rounded-xl shadow-xl"
                       />
                     </div>
                   </div>
 
                   {/* <!-- Product info --> */}
-                  <div className="mx-auto max-w-2xl px-4 pb-16 pt-10 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pb-24 lg:pt-10">
+                  <div className="mx-auto max-w-2xl px-4 pb-16 pt-2 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pb-24 lg:pt-2">
                     <div className="lg:col-span-2 lg:pr-8 flex items-center">
                       <h1 className="text-2xl mr-3 font-bold tracking-tight text-gray-900 dark:text-gray-200 sm:text-3xl">
                         {detail.title}
@@ -120,27 +114,20 @@ export default function PortfolioDetail() {
                         </div>
                       )}
                     </div>
-                    <div className="py-10 lg:col-span-2 lg:col-start-1 lg:pb-16 lg:pr-8 lg:pt-6">
+                    <div className="py-10 pt-4 lg:col-span-2 lg:col-start-1 lg:pb-16 lg:pr-8 lg:pt-6">
                       {/* <!-- Description and details --> */}
                       <div>
                         <h3 className="sr-only">Description</h3>
-
                         <div className="space-y-6">
-                          <p className="text-base text-gray-900 dark:text-gray-300">
-                            The Basic Tee 6-Pack allows you to fully express
-                            your vibrant personality with three grayscale
-                            options. Feeling adventurous? Put on a heather gray
-                            tee. Want to be a trendsetter? Try our exclusive
-                            colorway: &quot;Black&quot;. Need to add an extra
-                            pop of color to your outfit? Our white tee has you
-                            covered.
+                          <p className="indent-14 text-base text-gray-900 dark:text-gray-300">
+                            {detail.description}
                           </p>
                         </div>
                       </div>
 
                       <div className="mt-10">
-                        <h3 className="text-sm font-medium text-gray-900 dark:text-orange-500">
-                          Highlights
+                        <h3 className="font-medium text-gray-900 dark:text-orange-500">
+                          Responsibility
                         </h3>
 
                         <div className="mt-4">
