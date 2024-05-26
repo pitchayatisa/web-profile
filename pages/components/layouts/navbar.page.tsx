@@ -34,11 +34,7 @@ export default function Navbar() {
             >
               <span className="sr-only">Your Company</span>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=orange&shade=500"
-                alt=""
-              />
+              <img className="h-8 w-auto" src="/logo.png" alt="" />
             </a>
           </div>
           <div className="flex cursor-pointer lg:hidden z-50">
@@ -107,7 +103,7 @@ export default function Navbar() {
                 href="/#contact-me"
                 className="transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 text-white bg-gradient-to-b from-orange-400 via-orange-500 to-orange-600 hover:bg-gradient-to-br shadow-2xl shadow-orange-400/100 dark:shadow-xl dark:shadow-orange-700/50 font-medium rounded-full px-5 py-2.5 text-center"
               >
-                Contact Us
+                Contact
               </Link>
             </div>
           </div>
@@ -121,18 +117,12 @@ export default function Navbar() {
               isOpen
                 ? "right-0 translate-x-0"
                 : "-right-[100rem] translate-x-full"
-            } ease-in-out duration-1000 fixed inset-y-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10`}
+            } ease-in-out duration-1000 fixed inset-y-0 z-50 w-full overflow-y-auto bg-white dark:bg-gray-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10`}
           >
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">
                 <span className="sr-only">Your Company</span>
-                {/* <Image
-                  className="h-8 w-auto"
-                  src=""
-                  alt="profile"
-                  width={100}
-                  height={100}
-                /> */}
+                <img className="h-8 w-auto" src="/logo.png" alt="" />
               </a>
               <button
                 onClick={() => setIsOpen(!isOpen)}
@@ -164,7 +154,7 @@ export default function Navbar() {
                       key={index}
                       href={`${menus.link}`}
                       onClick={() => setIsOpen(false)}
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gradient-to-b from-orange-400 via-orange-500 to-orange-600 hover:bg-gradient-to-br hover:text-white hover:rounded-full hover:shadow-2xl hover:shadow-orange-400/100 dark:shadow-orange-700/50"
+                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white  hover:text-orange-500"
                     >
                       {menus.menu}
                     </Link>
@@ -173,7 +163,7 @@ export default function Navbar() {
                   <Link
                     href="/#contact-me"
                     onClick={() => setIsOpen(false)}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gradient-to-b from-orange-400 via-orange-500 to-orange-600 hover:bg-gradient-to-br hover:text-white hover:rounded-full hover:shadow-2xl hover:shadow-orange-400/100 dark:shadow-orange-700/50"
+                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white  hover:text-orange-500"
                   >
                     Contact me
                   </Link>

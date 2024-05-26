@@ -5,7 +5,7 @@ export interface Portfolio {
 
 export interface Image {
   imgName: string;
-  slug: string;
+  link: string;
 }
 
 export interface BtnPortfolio {
@@ -16,10 +16,16 @@ export interface BtnPortfolio {
 export interface PortfolioDetail {
   slug: string;
   title: string;
-  description: string;
-  link: string;
+  description?: string;
+  link?: string;
   isShow: boolean;
   img: string;
+  tool?: Tool[];
+  imgGroup?: ImageGroup[];
 }
-
-
+export interface Tool {
+  nameTool: string;
+}
+export interface ImageGroup {
+  img: string;
+}

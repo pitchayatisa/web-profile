@@ -5,31 +5,39 @@ export const portfolio: Array<Portfolio> = [
     type: "all",
     image: [
       {
-        slug: "thailand-ferry-company",
+        link: "https://ketube.live/",
+        imgName: "/portfolio/9.png",
+      },
+      {
+        link: "https://otcgroups.com/",
+        imgName: "/portfolio/8.png",
+      },
+      {
+        link: "https://songserm.com/",
         imgName: "/portfolio/1.png",
       },
       {
-        slug: "crm",
+        link: "crm",
         imgName: "/portfolio/2.png",
       },
       {
-        slug: "defi-links",
+        link: "https://defilinks.io/",
         imgName: "/portfolio/3.png",
       },
       {
-        slug: "coinpro-today",
+        link: "https://coinprotoday.com/",
         imgName: "/portfolio/4.png",
       },
       {
-        slug: "wisdom-money",
+        link: "https://wisdommoney.co.th/",
         imgName: "/portfolio/5.png",
       },
       {
-        slug: "adavu",
+        link: "https://adavu.com/",
         imgName: "/portfolio/6.png",
       },
       {
-        slug: "hiromitsu",
+        link: "hiromitsu",
         imgName: "/portfolio/7.png",
       },
     ],
@@ -38,7 +46,7 @@ export const portfolio: Array<Portfolio> = [
     type: "ui",
     image: [
       {
-        slug: "hiromitsu",
+        link: "hiromitsu",
         imgName: "/portfolio/7.png",
       },
     ],
@@ -47,23 +55,31 @@ export const portfolio: Array<Portfolio> = [
     type: "website",
     image: [
       {
-        slug: "thailand-ferry-company",
+        link: "ketube",
+        imgName: "/portfolio/9.png",
+      },
+      {
+        link: "otc-exchange",
+        imgName: "/portfolio/8.png",
+      },
+      {
+        link: "thailand-ferry-company",
         imgName: "/portfolio/1.png",
       },
       {
-        slug: "defi-links",
+        link: "defi-links",
         imgName: "/portfolio/3.png",
       },
       {
-        slug: "coinpro-today",
+        link: "coinpro-today",
         imgName: "/portfolio/4.png",
       },
       {
-        slug: "wisdom-money",
+        link: "wisdom-money",
         imgName: "/portfolio/5.png",
       },
       {
-        slug: "adavu",
+        link: "adavu",
         imgName: "/portfolio/6.png",
       },
     ],
@@ -72,7 +88,7 @@ export const portfolio: Array<Portfolio> = [
     type: "mobile",
     image: [
       {
-        slug: "crm",
+        link: "crm",
         imgName: "/portfolio/2.png",
       },
     ],
@@ -88,59 +104,97 @@ export const btnPortfolio: Array<BtnPortfolio> = [
 
 export const portfolioDetail: Array<PortfolioDetail> = [
   {
+    slug: "ketube",
+    title: "Ketube",
+    link: "https://ketube.live/",
+    isShow: true,
+    img: "/portfolio/9.png",
+  },
+  {
+    slug: "otc-exchange",
+    title: "OTC EXCHANGE",
+    link: "https://otcgroups.com/",
+    isShow: true,
+    img: "/portfolio/8.png",
+  },
+  {
     slug: "thailand-ferry-company",
     title: "Thailand Ferry Company",
-    description: "all",
     link: "https://songserm.com/",
     isShow: true,
-    img: "/portfolio/1.png"
+    img: "/portfolio/1.png",
   },
   {
     slug: "crm",
-    title: "CRM Application",
-    description: "ui",
-    link: "",
+    title: "CRM Mobile Application",
+    description:
+      "Design ui and develop CRM system for mobile applications. It is an application used for tracking plans according to projects.",
+    tool: [
+      { nameTool: "React Native" },
+      { nameTool: "Figma" },
+      { nameTool: "Xcode" },
+    ],
     isShow: false,
-    img: "/portfolio/2.png"
+    img: "/portfolio/2.png",
+    imgGroup: [
+      { img: "/portfolio/crm/1.png" },
+      { img: "/portfolio/crm/2.png" },
+      { img: "/portfolio/crm/3.png" },
+      { img: "/portfolio/crm/4.png" },
+      { img: "/portfolio/crm/5.png" },
+      { img: "/portfolio/crm/6.png" },
+      { img: "/portfolio/crm/7.png" },
+      { img: "/portfolio/crm/8.png" },
+      { img: "/portfolio/crm/9.png" },
+      { img: "/portfolio/crm/10.png" },
+      { img: "/portfolio/crm/11.png" },
+    ],
   },
   {
     slug: "defi-links",
     title: "DeFiLinks",
-    description: "ui",
     link: "https://defilinks.io/",
     isShow: true,
-    img: "/portfolio/3.png"
+    img: "/portfolio/3.png",
   },
   {
     slug: "coinpro-today",
     title: "Coinpro Today",
-    description: "ui",
     link: "https://coinprotoday.com/",
     isShow: true,
-    img: "/portfolio/4.png"
+    img: "/portfolio/4.png",
   },
   {
     slug: "wisdom-money",
     title: "Wisdom Money",
-    description: "Wisdom Money Co., Ltd. is an advertising and public relations company that produces online media. with a combination of technology To get results that are new and unique and for the best efficiency, fully integrated",
     link: "https://wisdommoney.co.th/",
     isShow: true,
-    img: "/portfolio/5.png"
+    img: "/portfolio/5.png",
   },
   {
     slug: "adavu",
     title: "Adavu",
-    description: "Introducing the first marketplace for investing in hotels, Vacation Home Portfolio Properties & residential properties with stable passive income.",
     link: "https://adavu.com/",
     isShow: true,
-    img: "/portfolio/6.png"
+    img: "/portfolio/6.png",
   },
   {
     slug: "hiromitsu",
     title: "Hiromitsu",
-    description: "mobile",
-    link: "",
+    description: "ui design for hiromitsu company.",
+    tool: [{ nameTool: "Figma" }],
     isShow: false,
-    img: "/portfolio/7.png"
+    img: "/portfolio/7.png",
+    imgGroup: [
+      { img: "/portfolio/hiromitsu/1.png" },
+      { img: "/portfolio/hiromitsu/2.png" },
+      { img: "/portfolio/hiromitsu/3.png" },
+      { img: "/portfolio/hiromitsu/4.png" },
+      { img: "/portfolio/hiromitsu/5.png" },
+      { img: "/portfolio/hiromitsu/6.png" },
+      { img: "/portfolio/hiromitsu/7.png" },
+      { img: "/portfolio/hiromitsu/8.png" },
+      { img: "/portfolio/hiromitsu/9.png" },
+    ],
   },
 ];
