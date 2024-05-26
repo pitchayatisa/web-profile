@@ -1,3 +1,4 @@
+import useTranslation from "next-translate/useTranslation";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
 import { portfolioDetail } from "../../const/portfolio/portfolio";
@@ -9,6 +10,7 @@ const Navbar = dynamic(() => import("../../components/layouts/navbar.page"), {
 });
 
 export default function PortfolioDetail() {
+  const { t, lang } = useTranslation("common");
   const router = useRouter();
 
   return (
@@ -133,7 +135,7 @@ export default function PortfolioDetail() {
                       <h3 className="sr-only">Description</h3>
                       <div className="space-y-6">
                         <p className="indent-14 text-base text-gray-900 dark:text-gray-300">
-                          {detail.description}
+                          {t(`${detail.description}`)}
                         </p>
                       </div>
                     </div>

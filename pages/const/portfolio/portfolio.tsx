@@ -17,7 +17,6 @@ export const portfolio: Array<Portfolio> = [
         imgName: "/portfolio/1.png",
       },
       {
-        link: "crm",
         imgName: "/portfolio/2.png",
       },
       {
@@ -37,7 +36,6 @@ export const portfolio: Array<Portfolio> = [
         imgName: "/portfolio/6.png",
       },
       {
-        link: "hiromitsu",
         imgName: "/portfolio/7.png",
       },
     ],
@@ -96,10 +94,10 @@ export const portfolio: Array<Portfolio> = [
 ];
 
 export const btnPortfolio: Array<BtnPortfolio> = [
-  { btnName: "All Work", code: "all" },
-  { btnName: "UI Design", code: "ui" },
-  { btnName: "Website", code: "website" },
-  { btnName: "Mobile", code: "mobile" },
+  { btnName: "btnPortAll", code: "all" },
+  { btnName: "btnPortUi", code: "ui" },
+  { btnName: "btnPortWebsite", code: "website" },
+  { btnName: "btnPortMobile", code: "mobile" },
 ];
 
 export const portfolioDetail: Array<PortfolioDetail> = [
@@ -127,13 +125,7 @@ export const portfolioDetail: Array<PortfolioDetail> = [
   {
     slug: "crm",
     title: "CRM Mobile Application",
-    description:
-      "Design ui and develop CRM system for mobile applications. It is an application used for tracking plans according to projects.",
-    tool: [
-      { nameTool: "React Native" },
-      { nameTool: "Figma" },
-      { nameTool: "Xcode" },
-    ],
+    description: "portDetail1",
     isShow: false,
     img: "/portfolio/2.png",
     imgGroup: [
@@ -181,7 +173,7 @@ export const portfolioDetail: Array<PortfolioDetail> = [
   {
     slug: "hiromitsu",
     title: "Hiromitsu",
-    description: "ui design for hiromitsu company.",
+    description: "portDetail2",
     tool: [{ nameTool: "Figma" }],
     isShow: false,
     img: "/portfolio/7.png",

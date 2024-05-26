@@ -1,10 +1,12 @@
 import { menu } from "@/pages/const/menu/menu";
+import useTranslation from "next-translate/useTranslation";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
 
 export default function Navbar() {
+  const { t } = useTranslation("home");
   const { theme, setTheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
 
@@ -30,11 +32,9 @@ export default function Navbar() {
           <div className="flex lg:flex-1">
             <a
               onClick={() => setIsOpen(!isOpen)}
-              href="#"
+              href="/"
               className="-m-1.5 p-1.5"
             >
-              <span className="sr-only">Your Company</span>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
               <Image
                 className="h-8 w-auto"
                 src="/logo.png"
@@ -74,7 +74,7 @@ export default function Navbar() {
                 href={`${menus.link}`}
                 className="transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 font-semibold leading-6 text-gray-900 hover:text-orange-500 dark:text-white dark:hover:text-orange-500"
               >
-                {menus.menu}
+                {t(`${menus.menu}`)}
               </Link>
             ))}
             <div className="flex items-center">
@@ -110,7 +110,7 @@ export default function Navbar() {
                 href="/#contact-me"
                 className="transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 text-white bg-gradient-to-b from-orange-400 via-orange-500 to-orange-600 hover:bg-gradient-to-br shadow-2xl shadow-orange-400/100 dark:shadow-xl dark:shadow-orange-700/50 font-medium rounded-full px-5 py-2.5 text-center"
               >
-                Contact
+                {t("menuContact")}
               </Link>
             </div>
           </div>
