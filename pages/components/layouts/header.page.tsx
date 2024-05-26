@@ -54,7 +54,7 @@ export default function Header() {
           <p className="mt-6 text-lg leading-8 text-gray-500 dark:text-gray-200">
             {introduction.description}
           </p>
-          <div className="mt-6 flex items-center justify-center gap-x-6 lg:justify-start">
+          <div className="mt-6 flex items-center justify-center gap-x-6 lg:justify-start s">
             <a
               href="/#contact-me"
               className="transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 text-white bg-gradient-to-b from-orange-400 via-orange-500 to-orange-600 hover:bg-gradient-to-br shadow-2xl shadow-orange-400/100 dark:shadow-xl dark:shadow-orange-700/50 font-medium rounded-full px-5 py-2.5 text-center "
