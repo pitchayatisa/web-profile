@@ -435,9 +435,9 @@ export default function Home() {
             id="contact-me"
             className="mx-auto lg:container pt-8 lg:pt-24 pb-10 px-6"
           >
-            <div className="relative isolate overflow-hidden bg-white/5 ring-1 ring-white/10 px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-8 lg:pt-0">
+            <div className="relative isolate overflow-hidden bg-white/5 ring-1 ring-white/10 px-6 pt-16 shadow-2xl rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-8 lg:pt-0">
               <svg
-                className="absolute -z-10 left-[max(50%,75rem)] h-[64rem] w-[128rem] -translate-x-1/2 stroke-gray-200 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]"
+                className="absolute -z-10 left-[max(50%,75rem)] h-[64rem] w-[128rem] -translate-x-1/2 stroke-gray-200 dark:stroke-none [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]"
                 aria-hidden="true"
               >
                 <defs>
@@ -471,7 +471,7 @@ export default function Home() {
               </svg>
               <div className="mx-auto max-w-xl md:max-w-lg xl:max-w-3xl text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
                 <h2 className="text-3xl font-bold tracking-tight  text-orange-500 dark:text-orange-500 sm:text-5xl">
-                  Let&#39;s work together
+                  Let&apos;s work together
                   <p className="text-gray-900 dark:text-gray-200 text-3xl sm:text-4xl">
                     on your next project.
                   </p>

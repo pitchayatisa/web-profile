@@ -52,7 +52,7 @@ export default function Navbar() {
             >
               <span className="sr-only">Open main menu</span>
               <svg
-                className="h-6 w-6"
+                className="h-6 w-6 stroke-[#F87315]"
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
@@ -144,7 +144,7 @@ export default function Navbar() {
               >
                 <span className="sr-only">Close menu</span>
                 <svg
-                  className="h-6 w-6"
+                  className="h-6 w-6 stroke-[#F87315]"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
@@ -167,7 +167,7 @@ export default function Navbar() {
                       key={index}
                       href={`${menus.link}`}
                       onClick={() => setIsOpen(false)}
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white  hover:text-orange-500"
+                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-800 dark:text-white  hover:text-orange-500"
                     >
                       {menus.menu}
                     </Link>
@@ -176,7 +176,7 @@ export default function Navbar() {
                   <Link
                     href="/#contact-me"
                     onClick={() => setIsOpen(false)}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white  hover:text-orange-500"
+                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-800 dark:text-white  hover:text-orange-500"
                   >
                     Contact me
                   </Link>
