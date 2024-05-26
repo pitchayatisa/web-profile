@@ -104,8 +104,10 @@ export default function Home() {
             >
               <div className="rounded-2xl py-12 md:py-18 px-6 md:px-0 text-center">
                 <h2 className="text-3xl mb-4 font-bold tracking-tight text-gray-900 dark:text-gray-200 sm:text-4xl">
-                  {"Client's get"}{" "}
-                  <span className="text-orange-500">always exceptional</span>{" "}
+                  {"Client"}&apos;s get
+                  <span className="text-orange-500">
+                    always exceptional
+                  </span>{" "}
                   works from me...
                 </h2>
                 <div className="flex items-center justify-center py-4 md:py-8 mb-4 flex-wrap">
@@ -469,7 +471,7 @@ export default function Home() {
               </svg>
               <div className="mx-auto max-w-xl md:max-w-lg xl:max-w-3xl text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
                 <h2 className="text-3xl font-bold tracking-tight  text-orange-500 dark:text-orange-500 sm:text-5xl">
-                  Let's work together
+                  Let&#39;s work together
                   <p className="text-gray-900 dark:text-gray-200 text-3xl sm:text-4xl">
                     on your next project.
                   </p>
