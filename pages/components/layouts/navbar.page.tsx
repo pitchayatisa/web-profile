@@ -2,6 +2,7 @@ import { menu } from "@/pages/const/menu/menu";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Navbar() {
   const { theme, setTheme } = useTheme();
@@ -34,7 +35,13 @@ export default function Navbar() {
             >
               <span className="sr-only">Your Company</span>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img className="h-8 w-auto" src="/logo.png" alt="" />
+              <Image
+                className="h-8 w-auto"
+                src="/logo.png"
+                alt="portfolio"
+                width={100}
+                height={100}
+              />
             </a>
           </div>
           <div className="flex cursor-pointer lg:hidden z-50">
@@ -122,7 +129,13 @@ export default function Navbar() {
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">
                 <span className="sr-only">Your Company</span>
-                <img className="h-8 w-auto" src="/logo.png" alt="" />
+                <Image
+                  className="h-8 w-auto"
+                  src="/logo.png"
+                  alt="portfolio"
+                  width={100}
+                  height={100}
+                />
               </a>
               <button
                 onClick={() => setIsOpen(!isOpen)}

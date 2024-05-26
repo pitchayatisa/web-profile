@@ -108,7 +108,7 @@ export default function PortfolioDetail() {
                     </h1>
                     {detail.isShow && (
                       <div className="w-9 h-9 cursor-pointer flex justify-center items-center transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 text-white bg-gradient-to-b from-orange-400 via-orange-500 to-orange-600 hover:bg-gradient-to-br shadow-2xl shadow-orange-400/100 dark:shadow-xl dark:shadow-orange-700/50 font-medium rounded-full">
-                        <Link href={detail.link} target="_blank">
+                        <Link href={detail?.link} target="_blank">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"

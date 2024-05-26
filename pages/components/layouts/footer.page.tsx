@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Footer() {
   return (
     <footer className="shadow-sm dark:shadow-none inset-x-0 top-0 z-50">
@@ -6,7 +8,13 @@ export default function Footer() {
           <ul className="flex flex-wrap justify-center md:justify-start items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
             <li className="mb-4">
               {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
-              <img className="h-8 w-auto" src="/logo.png" alt="" />
+              <Image
+                className="h-8 w-auto"
+                src="/logo.png"
+                alt="portfolio"
+                width={100}
+                height={100}
+              />
             </li>
           </ul>
           <span className="text-sm mb-4 text-gray-500 sm:text-center dark:text-gray-400">
