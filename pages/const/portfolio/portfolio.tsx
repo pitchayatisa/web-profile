@@ -17,6 +17,7 @@ export const portfolio: Array<Portfolio> = [
         imgName: "/portfolio/1.png",
       },
       {
+        link: "crm",
         imgName: "/portfolio/2.png",
       },
       {
@@ -36,6 +37,7 @@ export const portfolio: Array<Portfolio> = [
         imgName: "/portfolio/6.png",
       },
       {
+        link: "hiromitsu",
         imgName: "/portfolio/7.png",
       },
     ],
@@ -94,10 +96,10 @@ export const portfolio: Array<Portfolio> = [
 ];
 
 export const btnPortfolio: Array<BtnPortfolio> = [
-  { btnName: "btnPortAll", code: "all" },
-  { btnName: "btnPortUi", code: "ui" },
-  { btnName: "btnPortWebsite", code: "website" },
-  { btnName: "btnPortMobile", code: "mobile" },
+  { btnName: "All Work", code: "all" },
+  { btnName: "UI Design", code: "ui" },
+  { btnName: "Website", code: "website" },
+  { btnName: "Mobile", code: "mobile" },
 ];
 
 export const portfolioDetail: Array<PortfolioDetail> = [

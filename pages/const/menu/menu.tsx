@@ -3,22 +3,22 @@ import { Menu } from "./menu.type";
 export const menu: Array<Menu> = [
   {
     id: 1,
-    menu: "menuHome",
+    menu: "Home",
     link: "/",
   },
   {
     id: 2,
-    menu: "menuAboutMe",
+    menu: "AboutMe",
     link: "/#about-me",
   },
   {
     id: 3,
-    menu: "menuPort",
+    menu: "Portfolio",
     link: "/#portfolio",
   },
   {
     id: 4,
-    menu: "menuSkill",
+    menu: "Skill",
     link: "/#skill",
   },
 ];

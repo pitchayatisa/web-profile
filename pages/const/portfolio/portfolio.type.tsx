@@ -5,7 +5,7 @@ export interface Portfolio {
 
 export interface Image {
   imgName: string;
-  link?: string;
+  link: string;
 }
 
 export interface BtnPortfolio {

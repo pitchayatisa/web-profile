@@ -1,11 +1,9 @@
 import React, { useEffect } from "react";
-import useTranslation from "next-translate/useTranslation";
+import { introduction } from "@/pages/const/introduction/introduction";
 import Atropos from "atropos/react";
 import Aos from "aos";
 
 export default function Header() {
-  const { t } = useTranslation("home");
-
   useEffect(() => {
     // Aos.init();
     Aos.init({ duration: 1000 });
@@ -47,23 +45,21 @@ export default function Header() {
         </div>
         <div className="mx-auto max-w-2xl text-center lg:mx-0 lg:flex-auto lg:py-16 lg:text-left">
           <h2 className="font-bold tracking-tight text-gray-900 dark:text-gray-200 text-4xl">
-            {t("hello")}
+            HI THERE!
           </h2>
           <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-orange-500">
-            <span className="text-gray-900 dark:text-gray-200">
-              {t("prefix")}
-            </span>{" "}
-            {t("fullName")}
+            <span className="text-gray-900 dark:text-gray-200">{"I'm"}</span>{" "}
+            Pitchayatisa
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-500 dark:text-gray-200">
-            {t(`description`)}
+            {introduction.description}
           </p>
           <div className="mt-6 flex items-center justify-center gap-x-6 lg:justify-start s">
             <a
               href="/#contact-me"
               className="transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 text-white bg-gradient-to-b from-orange-400 via-orange-500 to-orange-600 hover:bg-gradient-to-br shadow-2xl shadow-orange-400/100 dark:shadow-xl dark:shadow-orange-700/50 font-medium rounded-full px-5 py-2.5 text-center "
             >
-              {t(`hireMe`)}
+              Hire Me
             </a>
           </div>
         </div>

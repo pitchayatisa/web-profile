@@ -1,5 +1,3 @@
-import useTranslation from "next-translate/useTranslation";
-import loadNamespaces from "next-translate/loadNamespaces";
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
@@ -24,7 +22,6 @@ const Navbar = dynamic(() => import("./components/layouts/navbar.page"), {
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const { t, lang } = useTranslation("home");
   const { theme } = useTheme();
   const [isClient, setIsClient] = useState(false);
   const [type, setType] = useState("all");
@@ -36,10 +33,12 @@ export default function Home() {
   }, []);
 
   const goToWebsite = (link: string) => {
-    if (link) {
-      window.open(link);
+    if (link === "hiromitsu" || link === "crm") {
+      router.push("/portfolio/" + link);
+    } else if (link === "#") {
+      return;
     } else {
-      router.push("/");
+      window.open(link);
     }
   };
 
@@ -58,10 +57,10 @@ export default function Home() {
             <div className="relative isolate overflow-hidden px-6 pt-16 pb-16 sm:px-6 py-24 lg:flex md:gap-x-14 xl:gap-x-4 lg:px-8 lg:pt-0">
               <div className="mx-auto max-w-sm xl:max-w-lg text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
                 <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-orange-500 sm:text-4xl">
-                  {t("aboutMe")}
+                  About me
                 </h2>
                 <p className="mt-6 text-lg leading-8 text-gray-500 dark:text-gray-200">
-                  {t("aboutMeDescription")}
+                  {aboutMe.description}
                 </p>
                 <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
                   <a
@@ -69,7 +68,7 @@ export default function Home() {
                     className="transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 text-white bg-gradient-to-b from-orange-400 via-orange-500 to-orange-600 hover:bg-gradient-to-br shadow-2xl shadow-orange-400/100 dark:shadow-xl dark:shadow-orange-700/50 font-medium rounded-full px-5 py-2.5 text-center"
                     download
                   >
-                    {t("download")}
+                    Download CV
                   </a>
                 </div>
               </div>
@@ -79,19 +78,17 @@ export default function Home() {
                     <li className="mb-10 ml-4" key={index}>
                       <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 bg-gradient-to-b from-orange-400 via-orange-500 to-orange-600"></div>
                       <h3 className="text-lg font-semibold text-gray-900 dark:text-orange-500">
-                        {t(`${value.position}`)}
+                        {value.position}
                       </h3>
                       <h3 className="text-base text-gray-900 dark:text-orange-500">
-                        {t(`${value.company}`)}
+                        {value.company}
                       </h3>
                       <p className="mb-4 text-sm font-normal leading-none text-gray-400 dark:text-gray-400">
-                        {t(`${value.years}`)}
+                        {value.years}
                       </p>
                       <ul className="mb-4 text-base font-normal text-gray-500 dark:text-gray-200">
                         <div
-                          dangerouslySetInnerHTML={{
-                            __html: `${t(value.detail)}`,
-                          }}
+                          dangerouslySetInnerHTML={{ __html: value.detail }}
                         />
                       </ul>
                     </li>
@@ -109,12 +106,11 @@ export default function Home() {
             >
               <div className="rounded-2xl py-12 md:py-18 px-6 md:px-0 text-center">
                 <h2 className="text-3xl mb-4 font-bold tracking-tight text-gray-900 dark:text-gray-200 sm:text-4xl">
-                  {t("portTitle1")}
-                  {lang === "en" ? <>&apos;</> : ""}
-                  {t("portTitle2")}{" "}
-                  <span className="text-orange-500">{t("portTitle3")}</span>
-                  {lang === "en" ? <>&nbsp;</> : ""}
-                  {t("portTitle4")}
+                  {"Client"}&apos;s get
+                  <span className="text-orange-500">
+                    always exceptional
+                  </span>{" "}
+                  works from me...
                 </h2>
                 <div className="flex items-center justify-center py-4 md:py-8 mb-4 flex-wrap">
                   {btnPortfolio.map((btn, index) => (
@@ -128,7 +124,7 @@ export default function Home() {
                           : "text-gray-900 dark:text-orange-500 dark:border border-orange-600 bg-gray-200 dark:bg-transparent"
                       } transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 font-medium rounded-full px-5 py-2.5 mr-3 mb-3 text-center`}
                     >
-                      {t(`${btn.btnName}`)}
+                      {btn.btnName}
                     </button>
                   ))}
                 </div>
@@ -174,26 +170,8 @@ export default function Home() {
           >
             <div className="relative isolate overflow-hidden px-6 pt-16 sm:px-6 md:pt-18 lg:mt-[3rem] lg:flex justify-between items-center gap-x-20 lg:gap-x-0 lg:px-8 lg:pt-0">
               <div className="mx-auto w-full max-w-7xl px-6 lg:px-8">
-                <h2 className="text-3xl text-center font-bold tracking-tight sm:text-4xl">
-                  <span
-                    className={`${
-                      lang === "en"
-                        ? "text-gray-900 dark:text-orange-500"
-                        : "text-orange-500"
-                    } `}
-                  >
-                    {t("my")}
-                  </span>
-                  {lang === "en" ? <>&nbsp;</> : ""}
-                  <span
-                    className={`${
-                      lang === "en"
-                        ? "text-orange-500"
-                        : "text-gray-900 dark:text-white"
-                    }`}
-                  >
-                    {t("skills")}
-                  </span>
+                <h2 className="text-3xl text-center font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+                  My <span className="text-orange-500">Skills</span>
                 </h2>
                 <div className="mx-auto mt-20 grid max-w-lg grid-cols-4 place-items-center items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
                   <Image
@@ -504,15 +482,14 @@ export default function Home() {
               </svg>
               <div className="mx-auto max-w-xl md:max-w-lg xl:max-w-3xl text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
                 <h2 className="text-3xl font-bold tracking-tight  text-orange-500 dark:text-orange-500 sm:text-5xl">
-                  {t("contactTitle1")}
-                  {lang === "en" ? <>&apos;</> : ""}
-                  {t("contactTitle2")}
+                  Let&apos;s work together
                   <p className="text-gray-900 dark:text-gray-200 text-3xl sm:text-4xl">
-                    {t("contactTitle3")}
+                    on your next project.
                   </p>
                 </h2>
                 <p className="mt-6 text-lg leading-8 text-gray-500 dark:text-gray-300">
-                  {t("contactDescription")}
+                  If you have any questions, feedback, or need further
+                  information, please feel free to contact me.
                 </p>
               </div>
               <div className="relative m-auto mt-0 h-40 lg:mt-9 lg:h-80 flex items-center justify-center">
@@ -567,13 +544,4 @@ export default function Home() {
       )}
     </div>
   );
-}
-
-export async function getStaticProps(ctx) {
-  return {
-    props: await loadNamespaces({
-      ...ctx,
-      pathname: "/",
-    }),
-  };
 }
