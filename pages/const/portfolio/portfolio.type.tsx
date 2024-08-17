@@ -16,6 +16,7 @@ export interface BtnPortfolio {
 export interface PortfolioDetail {
   slug: string;
   title: string;
+  subTitle?: string;
   description?: string;
   link?: string;
   isShow: boolean;

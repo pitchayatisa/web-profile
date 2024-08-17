@@ -105,6 +105,9 @@ export default function PortfolioDetail() {
                   <div className="lg:col-span-2 lg:pr-8 flex items-center">
                     <h1 className="text-2xl mr-3 font-bold tracking-tight text-gray-900 dark:text-gray-200 sm:text-3xl">
                       {detail.title}
+                      <span className="ml-2 text-orange-500">
+                        {detail.subTitle}
+                      </span>
                     </h1>
                     {detail.isShow && (
                       <div className="w-9 h-9 cursor-pointer flex justify-center items-center transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 text-white bg-gradient-to-b from-orange-400 via-orange-500 to-orange-600 hover:bg-gradient-to-br shadow-2xl shadow-orange-400/100 dark:shadow-xl dark:shadow-orange-700/50 font-medium rounded-full">

@@ -35,6 +35,8 @@ export default function Home() {
   const goToWebsite = (link: string) => {
     if (link === "hiromitsu" || link === "crm") {
       router.push("/portfolio/" + link);
+    } else if (link === "#") {
+      return;
     } else {
       window.open(link);
     }
@@ -144,6 +146,15 @@ export default function Home() {
                             width={500}
                             height={500}
                           />
+                          <span
+                            className={`${
+                              val.link === "#"
+                                ? "absolute top-2 right-2 bg-gradient-to-b text-white from-orange-400 via-orange-500 to-orange-600 font-medium rounded-full px-5 py-1"
+                                : "hidden"
+                            }`}
+                          >
+                            Closed
+                          </span>
                         </div>
                       ))
                   )}
