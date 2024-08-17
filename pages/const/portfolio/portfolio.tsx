@@ -20,7 +20,7 @@ export const portfolio: Array<Portfolio> = [
         imgName: "/portfolio/2.png",
       },
       {
-        link: "https://defilinks.io/",
+        link: "#",
         imgName: "/portfolio/3.png",
       },
       {
@@ -125,7 +125,14 @@ export const portfolioDetail: Array<PortfolioDetail> = [
   {
     slug: "crm",
     title: "CRM Mobile Application",
-    description: "portDetail1",
+    subTitle: "(Freelance Work)",
+    description:
+      "Design ui and develop CRM system for mobile applications. It is an application used for tracking plans according to projects.",
+    tool: [
+      { nameTool: "React Native" },
+      { nameTool: "Figma" },
+      { nameTool: "Xcode" },
+    ],
     isShow: false,
     img: "/portfolio/2.png",
     imgGroup: [
@@ -173,7 +180,8 @@ export const portfolioDetail: Array<PortfolioDetail> = [
   {
     slug: "hiromitsu",
     title: "Hiromitsu",
-    description: "portDetail2",
+    subTitle: "(Freelance Work)",
+    description: "Ui design for hiromitsu company.",
     tool: [{ nameTool: "Figma" }],
     isShow: false,
     img: "/portfolio/7.png",
